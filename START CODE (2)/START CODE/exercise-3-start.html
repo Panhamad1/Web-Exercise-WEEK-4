@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Example</title>
+  <style>
+    * {
+      color: white;
+      border-radius: 5px;
+      
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      height: 100%; /* Makes the layout fill the full viewport height */
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 60vh; /* Makes container span the full screen height */
+      gap: 1em;
+      padding: 1em;
+    }
+
+    header {
+      background-color: #1e90ff;
+      padding: 15px;
+      box-shadow: 0 4px 8px #0077ea;
+    }
+
+    main {
+      display: flex;
+      flex: 1; 
+      gap: 1em;
+      min-height: 0; 
+      
+
+    }
+
+    .content {
+      background-color: #3cb371;
+      flex-grow: 1;
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 8px  #2f8d59;
+    }
+
+    .content-title {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      flex-grow: 1; 
+      align-content: flex-start;
+      
+    }
+
+    .item {
+      background-color: #2f8d59;
+      padding: 20px;
+      box-shadow: 0 4px 8px  #226741;
+    }
+
+    aside {
+      background-color: #ff6347;
+      width: 100px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      box-shadow: 0 4px 8px  #e02200;
+    }
+
+    footer {
+      background-color: #4169e1;
+      padding: 15px;
+      box-shadow: 0 4px 8px  #1d44b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>header</header>
+    <main>
+      <section class="content">
+        <div class="content-title">main</div>
+        <div class="items">
+          <div class="item">item</div>
+          <div class="item">item</div>
+          <div class="item">item</div>
+          <div class="item">item</div>
+          <div class="item">item</div>
+          <div class="item">item</div>
+        </div>
+      </section>
+      <aside>sidebar</aside>
+    </main>
+    <footer>footer</footer>
+  </div>
+</body>
+</html>
